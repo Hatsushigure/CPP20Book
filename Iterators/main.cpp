@@ -17,4 +17,11 @@ int main()
 	std::cout << std::format("diatance between beginIter1 and endIter1 is {}\n", distance(beginIter1, endIter1));
 	std::cout << std::format("diatance between beginIter2 and endIter2 is {}\n", distance(beginIter2, endIter2));
 	std::cout << std::format("diatance between beginIter1 and beginIter2 is {}\n", distance(beginIter1, beginIter2));
+
+	//const iterator
+	auto cbeginIter {cbegin(vec)};
+	//(*cbeginIter) = 1;	//won't compile
+	(*beginIter1) = 2;	//ok
+	for (auto i : vec)
+		std::cout << std::format("{} ", i);
 }
